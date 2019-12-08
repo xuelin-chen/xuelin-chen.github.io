@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PreFab</title>
+<link href="./boilerplate.css" rel="stylesheet" type="text/css">
+<link href="./style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="gridContainer clearfix">
+  <div class="warp">
+    <div class="box">
+      <h1>3D Fabrication with Universal Building Blocks and Pyramidal Shells</h1>
+    </div>
+    <div class="affiliations_box"><a href="">Xuelin Chen *</a><sup>1</sup>
+								, <a href="https://honghuali.github.io/">Honghua Li *</a><sup>2</sup>
+								, <a href="https://www.cse.cuhk.edu.hk/~cwfu/">Chi-Wing Fu</a><sup>3</sup>
+								, <a href="http://www.cs.sfu.ca/~haoz/">Hao(Richard) Zhang</a><sup>4</sup>
+								, <a href="http://www.cs.tau.ac.il/~dcor//">Daniel Cohen-Or</a><sup>5</sup>
+                , <a href="http://www.cs.sdu.edu.cn/~baoquan/">Baoquan Chen</a><sup>1,6</sup>
+                <a>(*joint first authors)</a>
+
+								<br/><sup>1</sup>Shandong University, 
+								<sup>2</sup>Alibaba AI Labs, 
+								<sup>3</sup>The Chinese University of Hong Kong, 
+								<sup>4</sup>Simon Fraser University, 
+								<sup>5</sup>Tel Aviv University, 
+								<sup>6</sup>Peking University
+								</div>
+    <div class="siggraph_box">(<strong>SIGGRAPH Asia 2018</strong>)</div>
+  </div>
+  <div class="warp"> 
+    <div class="warp">
+      <table width="100%">
+        <tbody><tr>
+          <td width="100%"><img src="./prefab.png" alt="Input" class="warp"></td>
+		</tr>
+        <tr>
+          <td align="center" valign="left" class="teaser_td"><p><b>Figure 1:</b> We introduce a method for cost-efficient 3D fabrication by decomposing a 3D shape into (i) an internal core, to be assembled from universalbuilding blocks, and (ii) the residual, to be further decomposed into approximately pyramidal shells for efficient 3D printing. From left to right, thefour types of blocks, internal cores assembled from the blocks, 3D-printed pyramidal shells forming the residual, and the final object assembly. Thetwo 3D objects clearly have very different shapes, yet their internal cores can be assembled from exactly the same set of universal building blocks.</p></td>
+        </tr>
+      </tbody></table>
+    </div>
+    <p><b>Abstract:</b> We introduce a computational solution for cost-efficient 3D fabrication using universal building blocks. Our key idea is to employ a set of universal blocks, which can be massively prefabricated at a low cost, to quickly assemble and constitute a significant internal core of the target object, so that only the residual volume need to be 3D printed online. We further improve the fabrication efficiency by decomposing the residual volume into a small number of printing-friendly pyramidal pieces. Computationally, we face a coupled de-composition problem: decomposing the input object into an internal core and residual, and decomposing the residual, to fulfill a combination of objectives for efficient 3D fabrication. To this end, we formulate an optimization that jointly minimizes the residual volume, the number of pyramidal residual pieces, and the amount of support waste when printing the residual pieces. To solve the optimization in a tractable manner, we start with a maximal internal core and iteratively refine it with local cuts to minimize the cost function. Moreover, to efficiently explore the large search space, we resort to cost estimates aided by pre-computation and avoid the need to explicitly construct pyramidal decompositions for each solution candidate. Result show that our method can iteratively reduce the estimated printing time and cost, as well as the support waste, and helps to save hours of fabrication time and much material consumption.
+	</p>
+    <h4>Video:</h4>
+	<div style="position:relative">
+				<video style="float:none;margin:0 auto" width="640" height="480" controls="controls">
+				<source src="prefab.mp4" type="video/mp4">
+				Your browser does not support the video tag. Please download the video from the <a href="prefab.mp4">download page</a>.
+	</div>
+	<p>&nbsp;</p>
+    <h4>Downloads:</h4>
+    <ul>
+    <li>Paper [ <a href="./prefab-chen.pdf">high-res</a> ]</li>
+	  <li>Data [<a href="./prefab_data.zip">data.zip, 32.7MB</a>]</li>
+	  <li>Slides [<a href="./prefab.pptx">prefab.pptx]</a></li>
+	  <li>Fast-forward [<a href="./FF.mov">FF.mov]</a></li>
+    </ul>
+
+      <ul>
+      <li></li>
+    </ul>
+  </div>
+  
+</div>
+
+
+</body></html>
