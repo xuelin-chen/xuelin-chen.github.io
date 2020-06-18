@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NGP</title>
+<link href="./boilerplate.css" rel="stylesheet" type="text/css">
+<link href="./style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body data-gr-c-s-loaded="true">
+<div class="gridContainer clearfix">
+  <div class="warp">
+    <div class="box">
+      <h1>Neural Graphics Pipeline for Controllable Image Generation</h1>
+    </div>
+            
+    <div class="affiliations_box"><a href="https://xuelin-chen.github.io/">Xuelin Chen</a><sup>1</sup>
+              , <a href="http://www.cs.tau.ac.il/~dcor/">Daniel Cohen-Or</a><sup>2</sup>
+              , <a href="https://cfcs.pku.edu.cn/baoquan/">Baoquan Chen</a><sup>3</sup>
+              , <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/">Niloy Mitra</a><sup>4,5</sup> 
+          
+          
+              <br/><sup>1</sup>Shandong University, 
+              <sup>2</sup>Tel Aviv University, 
+              <sup>3</sup>Peking University, 
+              <sup>4</sup>University College London, 
+              <sup>5</sup>Adobe Research
+    </div>
+    
+
+  <div class="warp"> 
+    <table width="100%">
+        <tbody>
+     <tr>
+          <td width="100%"><img src="./images/teaser.png" alt="Input" class="warp"></td>
+		</tr>
+        <tr>
+          <td align="center" valign="left" class="teaser_td"><p><b>Neural Graphics Pipeline (NGP)</b>, a GAN-based model, samples a coarse 3D model, and provides full control over camera and illumination, and responds to geometry and appearance edits. NGP is trained directly on unlabelled real images. Mirrored balls (right-bottom) indicate corresponding illumination setting.</p></td>
+        </tr>
+       </tbody></table>
+
+    <h2>Abstract</h2>
+      <hr>
+      <p>
+        We present Neural Graphics Pipeline (NGP), a hybrid generative model that brings together neural and traditional image formation models. NGP generates coarse 3D models that are fed into neural rendering modules to produce view-specific interpretable 2D maps, which are then composited into the final output image using a traditional image formation model. Our approach offers control over image generation by providing direct handles controlling illumination and camera parameters, in addition to control over shape and appearance variations. The key challenge is to learn these controls through unsupervised training that links generated coarse 3D models with unpaired real images via neural and traditional (e.g., Blinn-Phong) rendering functions without establishing an explicit correspondence between them. We evaluate our hybrid modeling framework, compare with neural-only generation methods (namely, DCGAN, LSGAN, WGAN-GP, VON, and SRNs), report improvement in FID scores against real images, and demonstrate that NGP supports direct controls common in traditional forward rendering. Code, data, and trained models will be released on acceptance.    
+      </p>
+
+  
+  <p>&nbsp;</p>
+  <h2>Paper Video</h2>
+    <hr>
+    <div style="position:relative">
+          <video style="float:none;margin:0 auto" width="1980" height="1080" controls="controls">
+          <source src="./images/ngp_video.mp4" type="video/mp4">
+          </video>
+    </div>
+
+  
+  <p>&nbsp;</p>
+  <h2>NGP at Inference Time</h2>
+    <hr>
+    <img src="./images/pipeline_handles.png" alt="Input" class="warp">
+    <p>
+      At test time, starting from a sampled noise vector and a set of user control signals (marked in yellow), NGP uses a combination of learned networks (marked in mustard) and fixed functions (marked in blue) to produce a range of interpretable feature maps (including four reflectance propertys maps and a realistic specular map), which are then combined to produce a final image. Please refer to the paper for more technical details.
+    </p>
+  
+
+  <p>&nbsp;</p>
+  <h2>Visual Results and Comparisons</h2>
+    <hr>
+    <img src="./images/results_gallery_comparison.png" alt="Input" class="warp">
+    <p>
+      Qualitative comparison with baseline methods. NGP versus DCGAN, LSGAN, WGANGP, and VON. All the models were trained on the same set of real-world images.
+    </p>
+
+
+  <p>&nbsp;</p>
+  <h2>Controllable Image Generation</h2>
+    <hr>
+    
+    <p>
+      <b>Shape control.</b> NGP generates images of diverse shapes with ease via simply changing the shape code. Additionally, the user can directly edit the coarse geometry, as shown in the video.
+    </p>
+    <div style="position:relative">
+      <video style="float:none;margin:0 auto" width="1980" height="1080" controls="controls">
+      <source src="./images/shape_editing.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <p>
+      <b>Camera control.</b> We also support full camera view control for the final generated image while keeping all other factors. The upper part of the figure below illustrates the effect of changing the camera view for generating different final images. Note that earlier works including VON, SRNs, and Hologan also support various levels of camera control.
+    </p>
+    <img src="./images/camera_control.png" alt="Input" class="warp">
+    <p>
+      <b>Illumination control.</b> Our method models detailed normal maps in the reflectance property maps generation stage, so that additional lights can be added on top with explicit control of the illumination. We call this more versatile option NGP-plus (see details in Sec. A.5). Such level of control (i.e., explicit light count, position, and intensity) is not supported by VON and Hologan. The lower half of the figure above shows the effect of generating various images with different additional light settings.
+    </p>
+
+    <img src="./images/appearance_control.png" alt="Input" class="warp">
+    <p>
+      <b>Appearance control.</b> The overall appearance, particularly the colorization, of the content in the generated images can be easily changed by providing an exemplar image as guidance, leading to controllable and various appearance in generated images (see the figure above, note that the specular
+      highlights on the surface are preserved even under changes to the color of the cars/chairs.). Further, this allows the user to simply edit the diffuse albedo, akin to traditional control, using existing imaging tools, and render the final image using NGP, thus benefiting from the appearance disentanglement.
+    </p>
+    
+
+  <p>&nbsp;</p>
+  <div class="section">
+      <h2>Paper</h2>
+      <hr>
+        <h4>High-resolution paper:</h4>
+              <a href="ngp-highres.pdf">
+                  <img src="./images/paper_preview.png" style="width:100%; margin-right:0px; margin-top:-10px;">
+              </a>
+        <h4>
+          ArXiv <a href="">preprint</a>.
+        </h4>
+  </div>
+
+  
+  <p>&nbsp;</p>
+  <h2>BibTex</h2>
+  <hr>
+  TBA.
+  <!--
+	<p>
+	&nbsp;&nbsp;@ARTICLE{Lu:2014,<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author = {Lin Lu, Andrei Sharf, Haisen Zhao, Yuan Wei, Qingnan Fan, Xuelin Chen, Yann Savoye, Changhe Tu, Daniel Cohen-Or, Baoquan Chen},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title = {Build-to-Last: Strength to Weight 3D Printed Objects},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;journal = {ACM Trans. Graph. (Proc. SIGGRAPH)},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year = {2014},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month = {August},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;volume = {33},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number = {4},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pages = {97:1--97:10},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+	</p>	
+  -->
+
+  
+  <p>&nbsp;</p>
+  <h2>End.</h2>
+  <hr>
+     
+  </div>
+  
+</div>
+
+
+
+</div></body></html>
