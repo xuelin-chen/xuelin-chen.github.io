@@ -77,11 +77,20 @@
   <p>&nbsp;</p>
   <h2>Controllable Image Generation</h2>
     <hr>
+
+    <div style="position:relative">
+      <video muted  style="float:none;margin:0 auto" width="1980" height="1080" controls="controls" autoplay loop>
+          <source src="./images/camera_changing.mp4" type="video/mp4">
+          Sorry, your browser doesn't support embedded videos.
+      </video>
+      
+    </div>
     
     <p>
-      <b>Shape control.</b> NGP generates images of diverse shapes with ease via simply changing the shape code. Additionally, the user can directly edit the coarse geometry, as shown in the videos below.
+      <b>Shape control.</b> NGP generates images of diverse shapes with ease via simply changing the shape code. Additionally, the user can directly edit the coarse geometry, as shown in the main video.
     </p>
-    <div style="position:relative">
+    <!--
+      <div style="position:relative">
       <video muted  style="float:none;margin:0 auto" width="1980" height="1080" controls="controls" autoplay loop>
         <source src="./images/shape_editing_car.mp4" type="video/mp4">
         Sorry, your browser doesn't support embedded videos.
@@ -91,21 +100,26 @@
         Sorry, your browser doesn't support embedded videos.
       </video>
     </div>
-    
+    -->
+
     <p>
       <b>Camera control.</b> We also support full camera view control for the final generated image while keeping all other factors. The upper part of the figure below illustrates the effect of changing the camera view for generating different final images. Note that earlier works including VON, SRNs, and Hologan also support various levels of camera control.
     </p>
     <img src="./images/camera_control.png" alt="Input" class="warp">
+    
     <p>
-      <b>Illumination control.</b> Our method models detailed normal maps in the reflectance property maps generation stage, so that additional lights can be added on top with explicit control of the illumination. We call this more versatile option NGP-plus (see details in Sec. A.5). Such level of control (i.e., explicit light count, position, and intensity) is not supported by VON and Hologan. The lower half of the figure above shows the effect of generating various images with different additional light settings.
+      <b>Illumination control.</b> Our method models detailed normal maps in the reflectance property maps generation stage, so that additional lights can be added on top with explicit control of the illumination. We call this more versatile option NGP-plus (see details in Sec. A.5). Such level of control (i.e., explicit light count, position, and intensity) is not supported by VON and Hologan. The lower half of the figure above shows the effect of generating various images with different additional light settings. The video below shows images generaterd with changing lights.
     </p>
+    <video muted  style="float:none;margin:0 auto" width="1980" height="1080" controls="controls" autoplay loop>
+      <source src="./images/light_changing.mp4" type="video/mp4">
+      Sorry, your browser doesn't support embedded videos.
+    </video>
 
-    <img src="./images/appearance_control.png" alt="Input" class="warp">
     <p>
       <b>Appearance control.</b> The overall appearance, particularly the colorization, of the content in the generated images can be easily changed by providing an exemplar image as guidance, leading to controllable and various appearance in generated images (see the figure above, note that the specular
       highlights on the surface are preserved even under changes to the color of the cars/chairs.). Further, this allows the user to simply edit the diffuse albedo, akin to traditional control, using existing imaging tools, and render the final image using NGP, thus benefiting from the appearance disentanglement.
     </p>
-    
+    <img src="./images/appearance_control.png" alt="Input" class="warp">    
 
   <p>&nbsp;</p>
   <div class="box2">
