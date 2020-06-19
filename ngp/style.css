@@ -106,6 +106,8 @@ ul {
 	text-align: left;
 }
 
+.box2 img {box-shadow:5px 2px 6px #000} 
+
 @charset "UTF-8";
 /* Simple fluid media
    Note: Fluid media requires that you remove the media's height and width attributes from the HTML

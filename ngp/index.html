@@ -51,7 +51,7 @@
     <hr>
     <div style="position:relative">
           <video style="float:none;margin:0 auto" width="1980" height="1080" controls="controls">
-          <source src="./images/ngp_video.mp4" type="video/mp4">
+          <source src="./images/ngp_video_low.mp4" type="video/mp4">
           </video>
     </div>
 
@@ -82,8 +82,13 @@
       <b>Shape control.</b> NGP generates images of diverse shapes with ease via simply changing the shape code. Additionally, the user can directly edit the coarse geometry, as shown in the video.
     </p>
     <div style="position:relative">
-      <video style="float:none;margin:0 auto" width="1980" height="1080" controls="controls">
-      <source src="./images/shape_editing.mp4" type="video/mp4">
+      <video muted  style="float:none;margin:0 auto" width="1980" height="1080" controls="controls" autoplay loop>
+        <source src="./images/shape_editing_car.mp4" type="video/mp4">
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+      <video muted  style="float:none;margin:0 auto" width="1980" height="1080" controls="controls" autoplay loop>
+        <source src="./images/shape_editing_chair.mp4" type="video/mp4">
+        Sorry, your browser doesn't support embedded videos.
       </video>
     </div>
     
@@ -103,37 +108,55 @@
     
 
   <p>&nbsp;</p>
-  <div class="section">
+  <div class="box2">
       <h2>Paper</h2>
       <hr>
         <h4>High-resolution paper:</h4>
               <a href="ngp-highres.pdf">
-                  <img src="./images/paper_preview.png" style="width:100%; margin-right:0px; margin-top:-10px;">
+                  <img src="./images/paper_preview.png" style="width:100%;">
               </a>
-        <h4>
-          ArXiv <a href="">preprint</a>.
-        </h4>
   </div>
+  <p>&nbsp;</p>
+  <h4>
+    ArXiv <a href="https://arxiv.org/abs/2006.10569">preprint</a>.
+  </h4>
 
+  <p>&nbsp;</p>
+  <h2>References</h2>
+  <hr>
+  <p>
+    Radford Alec, Metz Luke, and Chintala Soumith. Unsupervised representation learning with deep convolutional generative adversarial networks. In International Conference on Learning Representations (ICLR), 2016.
+  </p>
+  <p>
+    Xudong Mao, Qing Li, Haoran Xie, Raymond YK Lau, Zhen Wang, and Stephen Paul Smolley. Least squares generative adversarial networks. In Proceedings of the IEEE International Conference on Computer Vision, pages 2794–2802, 2017.
+  </p>
+  <p>
+    Martin Arjovsky, Soumith Chintala, and Léon Bottou. Wasserstein generative adversarial networks. In International Conference on Machine Learning (ICML), pages 214–223, 2017.
+  </p>
+  <p>
+    Jun-Yan Zhu, Zhoutong Zhang, Chengkai Zhang, Jiajun Wu, Antonio Torralba, Josh Tenenbaum, and Bill Freeman. Visual object networks: image generation with disentangled 3d representations. In Advances in Neural Information Processing Systems (NeurIPS), pages 118–129, 2018.
+  </p> 
+
+  
+  <p>&nbsp;</p>
+  <h2>Code</h2>
+  <hr>
+	TBA.
   
   <p>&nbsp;</p>
   <h2>BibTex</h2>
   <hr>
-  TBA.
-  <!--
 	<p>
-	&nbsp;&nbsp;@ARTICLE{Lu:2014,<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author = {Lin Lu, Andrei Sharf, Haisen Zhao, Yuan Wei, Qingnan Fan, Xuelin Chen, Yann Savoye, Changhe Tu, Daniel Cohen-Or, Baoquan Chen},<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title = {Build-to-Last: Strength to Weight 3D Printed Objects},<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;journal = {ACM Trans. Graph. (Proc. SIGGRAPH)},<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year = {2014},<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month = {August},<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;volume = {33},<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number = {4},<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pages = {97:1--97:10},<br>
+  &nbsp;&nbsp;@misc{chen2020neural,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title = {Neural Graphics Pipeline for Controllable Image Generation},<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author = {Xuelin Chen and Daniel Cohen-Or and Baoquan Chen and Niloy J. Mitra},<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year = {2020},<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eprint={2006.10569},<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;archivePrefix={arXiv},<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;primaryClass={cs.CV}<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
 	</p>	
-  -->
+  
 
   
   <p>&nbsp;</p>
