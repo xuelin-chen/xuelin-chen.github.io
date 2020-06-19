@@ -92,10 +92,12 @@
     </div>
     -->
 
-    <video muted  style="float:none;margin:0 auto" width="1980" height="1080" controls="controls" autoplay loop>
-      <source src="./images/light_changing.mp4" type="video/mp4">
-      Sorry, your browser doesn't support embedded videos.
-    </video>
+    <div style="position:relative">
+      <video muted  style="float:none;margin:0 auto" width="1980" height="1080" controls="controls" autoplay loop>
+        <source src="./images/light_changing.mp4" type="video/mp4">
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+    </div>
     <p>
       <b>Illumination control.</b> Our method models detailed normal maps in the reflectance property maps generation stage, so that additional lights can be added on top with explicit control of the illumination. We call this more versatile option NGP-plus (see details in Sec. A.5). Such level of control (i.e., explicit light count, position, and intensity) is not supported by VON and Hologan. 
       The video above shows images generaterd with changing lights.
