@@ -11,20 +11,25 @@
 <div class="gridContainer clearfix">
   <div class="warp">
     <div class="box">
-      <h1>Neural Graphics Pipeline for Controllable Image Generation</h1>
+      <h1>Towards a Neural Graphics Pipeline for Controllable Image Generation</h1>
     </div>
             
-    <div class="affiliations_box"><a href="https://xuelin-chen.github.io/">Xuelin Chen</a><sup>1,4</sup>
-              , <a href="http://www.cs.tau.ac.il/~dcor/">Daniel Cohen-Or</a><sup>2</sup>
-              , <a href="https://cfcs.pku.edu.cn/baoquan/">Baoquan Chen</a><sup>3</sup>
-              , <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/">Niloy J. Mitra</a><sup>4,5</sup> 
+    <div class="affiliations_box" style="line-height: 25px; text-decoration: none;">
+              <a href="https://xuelin-chen.github.io/">Xuelin Chen</a><sup>1,2</sup>
+              , <a href="http://www.cs.tau.ac.il/~dcor/">Daniel Cohen-Or</a><sup>3</sup>
+              , <a href="https://cfcs.pku.edu.cn/baoquan/">Baoquan Chen</a><sup>1,4</sup>
+              , <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/">Niloy J. Mitra</a><sup>2,5</sup> 
           
           
-              <br/><sup>1</sup>Shandong University, 
-              <sup>2</sup>Tel Aviv University, 
-              <sup>3</sup>Peking University, 
-              <sup>4</sup>University College London, 
+              <br/>
+              <sup>1</sup>CFCS, Peking University, 
+              <sup>2</sup>University College London, 
+              <sup>3</sup>Tel Aviv University, 
+              <sup>4</sup>AICFVE, Beijing Film Academy, 
               <sup>5</sup>Adobe Research
+              <br/>
+              <a href="https://conferences.eg.org/eg2021/">Eurographics 2021</a>
+
     </div>
     
 
@@ -42,7 +47,7 @@
     <h2>Abstract</h2>
       <hr>
       <p>
-        We present Neural Graphics Pipeline (NGP), a hybrid generative model that brings together neural and traditional image formation models. NGP generates coarse 3D models that are fed into neural rendering modules to produce view-specific interpretable 2D maps, which are then composited into the final output image using a traditional image formation model. Our approach offers control over image generation by providing direct handles controlling illumination and camera parameters, in addition to control over shape and appearance variations. The key challenge is to learn these controls through unsupervised training that links generated coarse 3D models with unpaired real images via neural and traditional (e.g., Blinn-Phong) rendering functions without establishing an explicit correspondence between them. We evaluate our hybrid modeling framework, compare with neural-only generation methods (namely, DCGAN, LSGAN, WGAN-GP, VON, and SRNs), report improvement in FID scores against real images, and demonstrate that NGP supports direct controls common in traditional forward rendering. Code, data, and trained models will be released on acceptance.    
+        We present Neural Graphics Pipeline (NGP), a hybrid generative model that brings together neural and traditional image formation models. NGP generates coarse 3D models that are fed into neural rendering modules to produce view-specific interpretable 2D maps, which are then composited into the final output image using a traditional image formation model. Our approach offers control over image generation by providing direct handles controlling illumination and camera parameters, in addition to control over shape and appearance variations. The key challenge is to learn these controls through unsupervised training that links generated coarse 3D models with unpaired real images via neural and traditional (e.g., Blinn-Phong) rendering functions without establishing an explicit correspondence between them. We evaluate our hybrid modeling framework, compare with neural-only generation methods (namely, DCGAN, LSGAN, WGAN-GP, VON, and SRNs), report improvement in FID scores against real images, and demonstrate that NGP supports direct controls common in traditional forward rendering.   
       </p>
 
   
@@ -129,15 +134,11 @@
   <div class="box2">
       <h2>Paper</h2>
       <hr>
-        <h4>High-resolution paper:</h4>
               <a href="ngp-highres.pdf">
                   <img src="./images/paper_preview.png" style="width:100%;">
               </a>
   </div>
   <p>&nbsp;</p>
-  <h4>
-    ArXiv <a href="https://arxiv.org/abs/2006.10569">preprint</a>.
-  </h4>
 
   <p>&nbsp;</p>
   <h2>References</h2>
@@ -158,23 +159,25 @@
     [SRNs] Vincent Sitzmann, Michael Zollhöfer, and Gordon Wetzstein. Scene representation networks: Continuous 3d-structure-aware neural scene representations. In Advances in Neural Information Processing Systems (NeurIPS), pages 1119–1130, 2019.
   </p> 
 
-  
   <p>&nbsp;</p>
   <h2>Code</h2>
   <hr>
-	TBA.
+    [Coming soon]
+  </p> 
+
+  
   
   <p>&nbsp;</p>
   <h2>BibTex</h2>
   <hr>
 	<p>
-  &nbsp;&nbsp;@misc{chen2020neural,<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title = {Neural Graphics Pipeline for Controllable Image Generation},<br>
+  &nbsp;&nbsp;@misc{chen2021ngp,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title = {Towards a Neural Graphics Pipeline for Controllable Image Generation},<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author = {Xuelin Chen and Daniel Cohen-Or and Baoquan Chen and Niloy J. Mitra},<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year = {2020},<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eprint={2006.10569},<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;archivePrefix={arXiv},<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;primaryClass={cs.CV}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;journal = {Computer Graphics Forum},<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;volume = {40},<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number = {2},<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year = {2021}<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
 	</p>	
   
